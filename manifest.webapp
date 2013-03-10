@@ -1,16 +1,13 @@
 {
   "name": "Y!地図",
   "description": "地図",
-  "launch_path": "ymap.html",
+  "launch_path": "/ymap.html",
   "developer": {
     "name": "YiJAPAN",
     "url": "https://github.com/aitou/firefoxos-ymap"
   },
   "permissions": {
-    "geolocation":{},
-    "settings":{},
-    "systemXHR":{},
-    "device-storage:sdcard":{ "access": "readonly" }
+    "systemXHR":{"description": "YOLP APIを利用します。"}
   },
   "locales": {
     "en-US": {
