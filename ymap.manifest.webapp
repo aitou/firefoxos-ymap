@@ -1,0 +1,29 @@
+{
+  "name": "Y!地図",
+  "description": "地図",
+  "launch_path": "ymap.html",
+  "developer": {
+    "name": "YiJAPAN",
+    "url": "https://github.com/aitou/firefoxos-ymap"
+  },
+  "permissions": {
+    "geolocation":{},
+    "settings":{},
+    "systemXHR":{},
+    "device-storage:sdcard":{ "access": "readonly" }
+  },
+  "locales": {
+    "en-US": {
+      "name": "Y!地図",
+      "description": "地図"
+    },
+    "ja": {
+      "name": "Y!地図",
+      "description": "地図"
+    }
+  },
+  "icons": {
+    "128": "/style/ymap128.png"
+  },
+  "default_locale": "ja"
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="style/ymap.css" media="all">
+<title>Y!地図</title>
+</head>
+
+<body>
+<div id="map" style="height:480px;"></div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script src="http://js.api.olp.yahooapis.jp/OpenLocalPlatform/V1/jsapi?appid=dj0zaiZpPXk5enllWlJaYTJ5SCZkPVlXazlVVkZhVTNCRU5UZ21jR285TUEtLSZzPWNvbnN1bWVyc2VjcmV0Jng9YTk-" type="text/javascript" charset="UTF-8" ></script>
+<script>
+window.onload = function(){
+	$("#map").height(window.innerHeight);
+	var ymap = new Y.Map("map");
+    ymap.drawMap(new Y.LatLng(35.66572, 139.73100), 5, Y.LayerSetId.NORMAL);
+	var layerControl = new Y.LayerSetControl();
+	var zoomControl = new Y.ZoomControl();
+	var searchControl = new Y.SearchControl();
+	ymap.addControl(layerControl);
+	ymap.addControl(zoomControl);
+	ymap.addControl(searchControl);
+	window.onresize = function(){
+		$("#map").height(window.innerHeight);
+		ymap.updateSize();
+	}
+}
+</script>
+</body>
+</html>
